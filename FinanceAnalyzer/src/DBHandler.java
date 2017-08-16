@@ -23,7 +23,7 @@ public class DBHandler {
 	 */
 	private void initDB(){
 		log.log(Level.INFO,"Try to create DBConnection");
-		conn = new DBConnection();
+		conn = new DBConnection(props.getDBProperty("DatabaseLocation"));
 	}
 	public String getTargetTableName() {
 		return props.getDBProperty("TargetTable");

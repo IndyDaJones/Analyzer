@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2017-08-16T12:34:13</date>
-  <millis>1502879653308</millis>
+  <date>2017-08-16T12:46:39</date>
+  <millis>1502880399488</millis>
   <sequence>1</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -13,8 +13,8 @@
   <message>File location of Service:C:\Users\j.nyffeler\git\Analyzer\FinanceAnalyzer\src\</message>
 </record>
 <record>
-  <date>2017-08-16T12:34:13</date>
-  <millis>1502879653310</millis>
+  <date>2017-08-16T12:46:39</date>
+  <millis>1502880399488</millis>
   <sequence>2</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -24,8 +24,8 @@
   <message>create Calculator</message>
 </record>
 <record>
-  <date>2017-08-16T12:34:13</date>
-  <millis>1502879653315</millis>
+  <date>2017-08-16T12:46:39</date>
+  <millis>1502880399490</millis>
   <sequence>3</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Calculator created</message>
 </record>
 <record>
-  <date>2017-08-16T12:34:13</date>
-  <millis>1502879653316</millis>
+  <date>2017-08-16T12:46:39</date>
+  <millis>1502880399490</millis>
   <sequence>4</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -46,8 +46,8 @@
   <message>call Calculator.start()</message>
 </record>
 <record>
-  <date>2017-08-16T12:34:15</date>
-  <millis>1502879655144</millis>
+  <date>2017-08-16T12:46:41</date>
+  <millis>1502880401270</millis>
   <sequence>8</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -57,8 +57,8 @@
   <message>Connection created!</message>
 </record>
 <record>
-  <date>2017-08-16T12:34:15</date>
-  <millis>1502879655267</millis>
+  <date>2017-08-16T12:46:41</date>
+  <millis>1502880401373</millis>
   <sequence>23</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -68,8 +68,8 @@
   <message>Calculator started</message>
 </record>
 <record>
-  <date>2017-08-16T12:34:15</date>
-  <millis>1502879655267</millis>
+  <date>2017-08-16T12:46:41</date>
+  <millis>1502880401374</millis>
   <sequence>24</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>

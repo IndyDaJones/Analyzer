@@ -12,9 +12,9 @@ public class DBConnection {
 	
 	private static final Logger log = Logger.getLogger( Analyzer.class.getName() );
 	Connection conn;
-	public DBConnection(){
+	public DBConnection(String database){
 		try{
-			conn=createConnection();
+			conn=createConnection(database);
 	    }catch(Exception ex){
 	    	log.log(Level.SEVERE,"Connection exception catched" +ex.getLocalizedMessage());
 	    }
@@ -23,23 +23,23 @@ public class DBConnection {
 	 * Returns the connection if it is available. Otherwise a new connection is created
 	 * @return Connection
 	 */
-	Connection getConnection(){
+	Connection getConnection(String database){
 		if (conn!= null) {
 			log.log(Level.INFO,"Connection already open");
 			return conn;
 		}else {
 			log.log(Level.INFO,"No Connection available!");
-			return createConnection();
+			return createConnection(database);
 		}
 	}
 	/**
 	 * Creates a new connection
 	 * @return Connection
 	 */
-	Connection createConnection(){
+	Connection createConnection(String Database){
 		try {
 			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-			conn=DriverManager.getConnection("jdbc:ucanaccess://C:\\\\Users\\\\j.nyffeler\\\\OneDrive\\\\Dokumente\\\\JAG\\\\Data\\\\Misc_Data.accdb");
+			conn=DriverManager.getConnection("jdbc:ucanaccess://"+Database);
 			log.log(Level.INFO,"Connection created!");
 			return conn;
 	    } catch(Exception ex) {
