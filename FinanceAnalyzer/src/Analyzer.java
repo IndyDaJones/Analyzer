@@ -7,22 +7,16 @@ import java.util.logging.Logger;
 public class Analyzer {
 	private static final Logger log = Logger.getLogger( Analyzer.class.getName() );
 	static String logFile;
+	static Calculator calculator;
 	public static void main(String[] args) {
-		/**
-		 * Load WeatherService properties
-		 */
+		
+		log.log(Level.INFO,"start main");
 		AnalyzerProperty props = new AnalyzerProperty();
-		logFile = props. getServiceProperty("LogFileDest");
-	
+		logFile = props.getServiceProperty("LogFileDest");
 		initLogging();
-		
-		log.log(Level.INFO,"call Analyzer!");
-		//initDevice(sys);
-		log.log(Level.INFO,"Analyzer initiated");
-		
-		log.log(Level.INFO,"Database closed!");
-		//db.closeDB();
+		start();
 		log.log(Level.INFO,"end main");
+		
 	}
 	/**
 	 * In this method the logging Handler is initialized
@@ -33,11 +27,6 @@ public class Analyzer {
 				 * Using the setUseParentHandlers = false flag, the program no more writes in the console
 				 */
 				log.setUseParentHandlers(true);
-				/**Logger globalLogger = Logger.getLogger("global");
-				Handler[] handlers = globalLogger.getHandlers();
-				for(Handler handler : handlers) {
-				    globalLogger.removeHandler(handler);
-				}*/
 				Handler handler = new FileHandler( logFile +"Analyzer.log" );
 				log.addHandler(handler);
 				log.log(Level.INFO,"File location of Service:"+logFile);
@@ -47,4 +36,15 @@ public class Analyzer {
 				log.log(Level.SEVERE,e.getLocalizedMessage());
 			}
 		}
+		/**
+		 * In this method the logging Handler is initialized
+		 */
+			private static void start(){
+				log.log(Level.INFO,"create Calculator");
+				calculator = new Calculator();
+				log.log(Level.INFO,"Calculator created");
+				log.log(Level.INFO,"call Calculator.start()");
+				calculator.start();
+				log.log(Level.INFO,"Calculator started");
+			}
 }
