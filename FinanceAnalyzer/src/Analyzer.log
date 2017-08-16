@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2017-08-15T17:07:55</date>
+  <millis>1502809675540</millis>
+  <sequence>0</sequence>
+  <logger>Analyzer</logger>
+  <level>INFO</level>
+  <class>Analyzer</class>
+  <method>initLogging</method>
+  <thread>1</thread>
+  <message>File location of Service:C:\Users\j.nyffeler\eclipse-workspace\FinanceAnalyzer\src\</message>
+</record>
+<record>
+  <date>2017-08-15T17:07:55</date>
+  <millis>1502809675624</millis>
+  <sequence>1</sequence>
+  <logger>Analyzer</logger>
+  <level>INFO</level>
+  <class>Analyzer</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>call Analyzer!</message>
+</record>
+<record>
+  <date>2017-08-15T17:07:55</date>
+  <millis>1502809675625</millis>
+  <sequence>2</sequence>
+  <logger>Analyzer</logger>
+  <level>INFO</level>
+  <class>Analyzer</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Analyzer initiated</message>
+</record>
+<record>
+  <date>2017-08-15T17:07:55</date>
+  <millis>1502809675626</millis>
+  <sequence>3</sequence>
+  <logger>Analyzer</logger>
+  <level>INFO</level>
+  <class>Analyzer</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Database closed!</message>
+</record>
+<record>
+  <date>2017-08-15T17:07:55</date>
+  <millis>1502809675627</millis>
+  <sequence>4</sequence>
+  <logger>Analyzer</logger>
+  <level>INFO</level>
+  <class>Analyzer</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>end main</message>
+</record>
+</log>

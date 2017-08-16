@@ -1,0 +1,6 @@
+dev.loc.dbms     mysql
+dev.loc.Server   localhost
+dev.loc.Database dev.services
+dev.loc.Port     3306
+dev.loc.user     weatherclient
+LogFileDest		 C:\\Users\\j.nyffeler\\eclipse-workspace\\FinanceAnalyzer\\src\\
