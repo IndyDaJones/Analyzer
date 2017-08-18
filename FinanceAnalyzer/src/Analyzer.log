@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2017-08-16T12:46:39</date>
-  <millis>1502880399488</millis>
+  <date>2017-08-18T13:00:49</date>
+  <millis>1503054049463</millis>
   <sequence>1</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -13,8 +13,8 @@
   <message>File location of Service:C:\Users\j.nyffeler\git\Analyzer\FinanceAnalyzer\src\</message>
 </record>
 <record>
-  <date>2017-08-16T12:46:39</date>
-  <millis>1502880399488</millis>
+  <date>2017-08-18T13:00:49</date>
+  <millis>1503054049469</millis>
   <sequence>2</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -24,8 +24,8 @@
   <message>create Calculator</message>
 </record>
 <record>
-  <date>2017-08-16T12:46:39</date>
-  <millis>1502880399490</millis>
+  <date>2017-08-18T13:00:49</date>
+  <millis>1503054049518</millis>
   <sequence>3</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Calculator created</message>
 </record>
 <record>
-  <date>2017-08-16T12:46:39</date>
-  <millis>1502880399490</millis>
+  <date>2017-08-18T13:00:49</date>
+  <millis>1503054049521</millis>
   <sequence>4</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
@@ -46,20 +46,9 @@
   <message>call Calculator.start()</message>
 </record>
 <record>
-  <date>2017-08-16T12:46:41</date>
-  <millis>1502880401270</millis>
-  <sequence>8</sequence>
-  <logger>Analyzer</logger>
-  <level>INFO</level>
-  <class>DBConnection</class>
-  <method>createConnection</method>
-  <thread>1</thread>
-  <message>Connection created!</message>
-</record>
-<record>
-  <date>2017-08-16T12:46:41</date>
-  <millis>1502880401373</millis>
-  <sequence>23</sequence>
+  <date>2017-08-18T13:00:53</date>
+  <millis>1503054053372</millis>
+  <sequence>777</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
   <class>Analyzer</class>
@@ -68,9 +57,9 @@
   <message>Calculator started</message>
 </record>
 <record>
-  <date>2017-08-16T12:46:41</date>
-  <millis>1502880401374</millis>
-  <sequence>24</sequence>
+  <date>2017-08-18T13:00:53</date>
+  <millis>1503054053372</millis>
+  <sequence>778</sequence>
   <logger>Analyzer</logger>
   <level>INFO</level>
   <class>Analyzer</class>

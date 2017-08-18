@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class DBConnection {
 	
-	private static final Logger log = Logger.getLogger( Analyzer.class.getName() );
+	private static final Logger log = Logger.getLogger( DBConnection.class.getName() );
 	Connection conn;
 	public DBConnection(String database){
 		try{

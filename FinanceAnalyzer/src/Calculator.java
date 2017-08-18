@@ -45,16 +45,61 @@ public class Calculator {
 	}
 	
 	private void analyzeQuery(String query) {
+		Hashtable result = new Hashtable();
 		ResultSet rs =  db.executeQuery(query);
+		//regex.
 		try {
 			while((rs!=null) && (rs.next()))
-			{
-			    System.out.println(rs.getString(1) + " : " + rs.getString(2));
+			{	
+				System.out.println(rs.getString(1) + " : " + rs.getString(2));
+				if (!result.containsKey(rs.getString(1).substring(0, rs.getString(1).indexOf(",")))){
+					log.log(Level.INFO,"New entry to hashtable: " + rs.getString(1).substring(0, rs.getString(1).indexOf(",")));
+					result.put(rs.getString(1).substring(0, rs.getString(1).indexOf(",")), rs.getString(2));
+				}else {
+					log.log(Level.INFO,"Existing entry in hashtable: " + rs.getString(1).substring(0, rs.getString(1).indexOf(",")));
+					int value_retrieved = Integer.parseInt(result.get(rs.getString(1).substring(0, rs.getString(1).indexOf(","))).toString());
+					int value_new = Integer.parseInt(rs.getString(2).toString());
+									
+					log.log(Level.INFO,"Entry retrieved: " + result.get(rs.getString(1).substring(0, rs.getString(1).indexOf(","))));
+					result.replace(rs.getString(1).substring(0, rs.getString(1).indexOf(",")), value_retrieved + value_new);
+				}
 			}
+			log.log(Level.INFO,"Data in hashtable: " + result.size());
+			result.forEach((k,v) ->log.log(Level.INFO,"Company: "+k+" 			Order Intake:"+v));
+			db.InsertResult(result);
 		} catch (SQLException e) {
 			log.log(Level.SEVERE,"SQL Exception catched: " + e.getLocalizedMessage());
 		}
 		log.log(Level.INFO,"called calculate");
 	}
+	private void analyzeQuery(String query, int i) {
+		Hashtable result = new Hashtable();
+		ResultSet rs =  db.executeQuery(query);
+		//regex.
+		try {
+			while((rs!=null) && (rs.next()))
+			{	
+				System.out.println(rs.getString(1) + " : " + rs.getString(2));
+				if (!result.containsKey(rs.getString(1).substring(0, rs.getString(1).indexOf(",")))){
+					log.log(Level.INFO,"New entry to hashtable: " + rs.getString(1).substring(0, rs.getString(1).indexOf(",")));
+					result.put(rs.getString(1).substring(0, rs.getString(1).indexOf(",")), rs.getString(2));
+				}else {
+					log.log(Level.INFO,"Existing entry in hashtable: " + rs.getString(1).substring(0, rs.getString(1).indexOf(",")));
+					int value_retrieved = Integer.parseInt(result.get(rs.getString(1).substring(0, rs.getString(1).indexOf(","))).toString());
+					int value_new = Integer.parseInt(rs.getString(2).toString());
+									
+					log.log(Level.INFO,"Entry retrieved: " + result.get(rs.getString(1).substring(0, rs.getString(1).indexOf(","))));
+					result.replace(rs.getString(1).substring(0, rs.getString(1).indexOf(",")), value_retrieved + value_new);
+				}
+			}
+			log.log(Level.INFO,"Data in hashtable: " + result.size());
+			result.forEach((k,v) ->log.log(Level.INFO,"Company: "+k+" 			Order Intake:"+v));
+			db.InsertResult(result);
+		} catch (SQLException e) {
+			log.log(Level.SEVERE,"SQL Exception catched: " + e.getLocalizedMessage());
+		}
+		log.log(Level.INFO,"called calculate");
+	}
+
 	
 }

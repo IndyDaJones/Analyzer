@@ -1,12 +1,13 @@
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DBHandler {
-	private static final Logger log = Logger.getLogger( Calculator.class.getName() );
+	private static final Logger log = Logger.getLogger( DBHandler.class.getName() );
 	DBConnection conn;
 	DBHandlerProperty props;
 	/**
@@ -96,12 +97,41 @@ public class DBHandler {
 	        log.log(Level.INFO,"Query executed");
 	        rs = s.getResultSet();
 	        s.close();
-	        conn.closeConnection();
         }catch(Exception ex){
     		conn.closeConnection();
         	log.log(Level.SEVERE,"SQLException catched: "+ex.getLocalizedMessage());
 	    }
 		return rs;
+	}
+	public void InsertResult(Hashtable result) {
+		try{ 
 
+			Statement s = conn.createStatement();
+			 // create a table
+            String tableName = "RsultTable_" + String.valueOf((int)(Math.random() * 1000.0));
+            String createTable = "CREATE TABLE " + tableName + 
+                                 " (customer_name Text(32), revenue Double)";
+            s.execute(createTable);
+            Enumeration res = result.keys();
+            // enter value into table
+            
+            while(res.hasMoreElements()) {
+            	String element = res.nextElement().toString();
+            	log.log(Level.INFO,"Insert row: <"+element+">,<"+result.get(element)+">");
+            	String addRow = "INSERT INTO " + tableName + " VALUES ( '" +
+            			element +"',"+result.get(element) + ")";
+              s.execute(addRow);
+            }
+            			
+			log.log(Level.INFO,"Statement established");
+
+	        log.log(Level.INFO,"Query executed");
+       
+	        s.close();
+        
+        }catch(Exception ex){
+    		conn.closeConnection();
+        	log.log(Level.SEVERE,"SQLException catched: "+ex.getLocalizedMessage());
+	    }
 	}
 }
